@@ -1,0 +1,33 @@
+.avathar{
+    width:200px;
+    height:200px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    color:#fff;
+    background-color: #813aff !important;
+    border-color: #813afe !important;
+}
+
+
+.btn-primary:hover {
+    color:#fff;
+    background-color: #813aff!important;
+    border-color: #5b11da!important;
+}
+
+.contain{
+
+    margin-top: 60px;
+}
+
+.last{
+    text-align: left;
+    margin-top: 10px;
+   
+}
+
+.head{
+   color: #813aff; 
+}

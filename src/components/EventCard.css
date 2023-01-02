@@ -1,0 +1,86 @@
+.favourite {
+  color: rgb(3, 185, 252);
+}
+
+.ticket {
+  color: rgb(221, 255, 0);
+  transform: rotate(-30deg);
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.location {
+  color: rgb(0, 255, 242);
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.search {
+  color: gray;
+}
+
+
+.eventcard {
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.startmonth {
+  color: red;
+  font-weight: 600;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  width: 25%;
+}
+
+.dates {
+  color: white;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1077%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1078)'%3e%3c/rect%3e%3cpath d='M169.64034672737986 285.92574478502854L174.97431104760142 133.18099150912872 22.229557771701593 127.84702718890716 16.89559345148004 280.59178046480696z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M88.607%2c145.828C109.56%2c145.055%2c131.093%2c139.002%2c141.763%2c120.953C152.593%2c102.633%2c149.413%2c79.728%2c138.471%2c61.474C127.857%2c43.767%2c109.249%2c32.525%2c88.607%2c32.275C67.515%2c32.02%2c48.109%2c42.559%2c36.607%2c60.241C23.858%2c79.839%2c16.057%2c105.16%2c28.197%2c125.141C40.042%2c144.638%2c65.809%2c146.669%2c88.607%2c145.828' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M492.36896337105776 50.0213832350794L487.5143586829801 189.0390726712996 626.5320481192003 193.8936773593772 631.386652807278 54.87598792315701z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1168.6230045117993 448.07325254380004L1165.4830910176956 388.16013397516826 1077.1833699117997 422.82656350063945z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1211.7277749965747 73.52865037873462L1228.1089899453316 144.48348772073788 1326.3506384839582 84.43424662660094z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M886.7848842161144 445.83298943553484L917.1739020305679 314.20369192903786 785.544604524071 283.81467411458436 755.1555867096174 415.4439716210813z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1077'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1078'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='%2300459e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.price {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: dimgrey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.title {
+  font-weight: 600;
+  font-family: Calibri;
+}
+
+.starttime {
+  font-size: 0.8rem;
+  color: rgba(40, 37, 37, 0.6);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.dateclass {
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.time {
+  color: rgb(255, 98, 0);
+}
