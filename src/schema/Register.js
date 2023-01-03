@@ -16,7 +16,7 @@ export const registerValidation = Yup.object({
   
   password: Yup.string().min(6).required("Please enter your password")
   .min(8,'Password too short should be 8 minimum')
-  .matches(/[a-zA-Z0-9]/,'Password can only contain Latin Letters.'),
+  .matches(/[a-zA-Z0-9]/,'Password should be alphanumeric'),
 
   place:Yup.string()
   .max(15,'Must be 15 Characters or Less')

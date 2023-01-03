@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 export const addValidation = Yup.object({
   title: Yup.string()
-    .max(15, "Must be 15 Characters or Less")
+    .max(40, "Must be 40 Characters or Less")
     .required("title required"),
   place: Yup.string()
     .max(15, "Must be 15 Characters or Less")

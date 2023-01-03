@@ -7,7 +7,7 @@ import { allFilters } from "../features/navbar/filterSlice";
 import { useNavigate } from "react-router-dom";
 
 
-const LoggedNav = ({logState}) => {
+const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const filters = useSelector(allFilters);
@@ -17,13 +17,14 @@ const LoggedNav = ({logState}) => {
     return event.place.toLowerCase();
   });
 
-  function removeDuplicates(arr) {
-    return arr.filter((item,
-      index) => arr.indexOf(item) === index);
-    }
+
+function removeDuplicates(arr) {
+return arr.filter((item,
+  index) => arr.indexOf(item) === index);
+}
 
 const placesWithoutDuplicates = removeDuplicates(places);
-    
+
 
   const filteredPlaces = placesWithoutDuplicates.map((place, index) => {
     return <option key={index} value={place}>{place}</option>;
@@ -34,7 +35,6 @@ const placesWithoutDuplicates = removeDuplicates(places);
   });
 
   const categoryWithoutDuplicates = removeDuplicates(category);
-
   const filteredCategories = categoryWithoutDuplicates.map((category,index) => {
     return <option key={index} value={category}>{category}</option>;
   });
@@ -56,13 +56,8 @@ const placesWithoutDuplicates = removeDuplicates(places);
     navigate('/search')
   }
 
-  const logout = ()=>{
-    logState()
-    localStorage.removeItem("token")
-  }
-
-  const addEvent = ()=>{
-    navigate('/addevent')
+  const login = ()=>{
+    navigate('/login');
   }
 
   const home = ()=>{
@@ -84,7 +79,6 @@ const placesWithoutDuplicates = removeDuplicates(places);
 
             {filteredCategories}
           </select>
-          <div className="addevents"><button onClick={addEvent}>Add events</button></div>
       </div>
       <div className="navright">
         <div className="search">
@@ -95,11 +89,11 @@ const placesWithoutDuplicates = removeDuplicates(places);
           </button>
         </div>
         <div className="loginbtn">
-          <button onClick={logout}>logout</button>
+          <button onClick={login}>login</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default LoggedNav;
+export default Navbar;

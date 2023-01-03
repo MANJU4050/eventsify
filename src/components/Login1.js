@@ -1,20 +1,25 @@
-import React from "react";
-import { Col, Row, Container, Button } from "react-bootstrap";
-import avathar from "../assets/avathar.svg";
-import authimg from "../assets/login.svg";
-import "./Login.css";
+import React from 'react'
 import { useFormik } from "formik";
 import { loginValidation } from "../schema/Login";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Login1.css'
 
 const initialValues = {
-  email: "",
-  password: "",
-};
+    email: "",
+    password: "",
+  };
+  
 
-const Login = () => {
-  const navigate = useNavigate();
+const Login1 = () => {
+    const navigate = useNavigate();
+
+
+    const register = ()=>{
+        navigate('/registration')
+    }
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
@@ -48,66 +53,62 @@ const Login = () => {
       },
     });
 
+    const home = ()=>{
+        navigate('/');
+    }
   return (
-    <Container className="contain">
-      <Row>
-        <Col lg={4} md={6} sm={12} className="text-left  mt-2">
-          <h3 className=" head  mb-5">Sign in your account!!!</h3>
-          <img className="avathar" src={avathar} alt="icon" />
 
-          <form onSubmit={handleSubmit}>
+    <div className='login'>
+
+        <div className='homepage'><FontAwesomeIcon onClick={home} className='home' icon="fa-solid fa-house" /></div>
+        
+         <form onSubmit={handleSubmit}>
+         <div className='loginnewinner'>
+            <h1>LOGIN</h1>
             <div>
               <input
                 type="email"
-                autoComplete="off"
                 name="email"
                 id="email"
                 placeholder="Enter Your Email"
-                className="form-control mb-4"
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
               {errors.email && touched.email ? (
-                <p className="form-error">{errors.email}</p>
+                <p className="error">{errors.email}</p>
               ) : null}
             </div>
 
-            <div>
+            <div  className='passwordinput'>
               <input
                 type="password"
-                autoComplete="off"
                 name="password"
                 id="password"
-                className="form-control mb-4"
                 placeholder="Enter Your password"
                 value={values.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
               {errors.password && touched.password ? (
-                <p className="form-error">{errors.password}</p>
+                <p className="error">{errors.password}</p>
               ) : null}
             </div>
 
-            <div className="d-grid gap-2 mb-4">
-              <Button variant="primary" size="md" type="submit">
-                Sign In
-              </Button>
-            </div>
-            <div className="last mt-4">
-              <a href="./register" className="">
-                please register here!
-              </a>
-            </div>
-          </form>
-        </Col>
+            <div className="loginBtn">
+              <button type="submit">
+                Log in
+              </button>
+            <p>New User?<span className='loginNew' onClick={register}>Register here</span></p>
 
-        <Col lg={8} md={6} sm={12}>
-          <img src={authimg} alt="icon" className="w-100" />
-        </Col>
-      </Row>
-    </Container>
-  );
-};
-export default Login;
+              
+            </div>
+            </div>
+            </form>
+            
+    </div>
+   
+  )
+}
+
+export default Login1

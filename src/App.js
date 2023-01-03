@@ -1,26 +1,29 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Registration from './components/Registration'
-import Login from "./components/Login"
-import AddEvent from "./components/AddEvent";
 import Home from "./components/Home";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import Home1 from "./components/Home1";
+import Search from "./components/Search";
+import Login1 from "./components/Login1";
+import Registration1 from "./components/Registration1";
+import AddEvents from "./components/AddEvents";
 
-library.add(fas)
+library.add(fas);
 function App() {
   return (
     <>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Registration />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/addevent' element={<AddEvent />} />
-      </Routes>
-    </Router>
-
+      <Router>
+        <Routes>
+          <Route path="/registration" element={<Registration1 />} />
+          <Route path="/login" element={<Login1 />} />
+          <Route path="/" element={<Home />}>
+            <Route index element={<Home1 />} />
+            <Route path="addevent" element={<AddEvents />} />
+            <Route path="search" element={<Search />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
-    
   );
 }
 

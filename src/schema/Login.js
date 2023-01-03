@@ -1,10 +1,10 @@
 import * as Yup from "yup";
 export const loginValidation = Yup.object({
 
-email: Yup.string().email().required("Please enter your email"),
+email: Yup.string().email().required("Email Required!"),
 
-password: Yup.string().min(6).required("Please enter your password")
-  .min(8,'Password too short should be 8 minimum')
-  .matches(/[a-zA-Z]/,'Password can only contain Latin Letters.'),
+password: Yup.string().min(6).required("Password Required!")
+  .min(8,'Password too short')
+  .matches(/[a-zA-Z0-9]/,'Password should be alphanumberic'),
 
 })
